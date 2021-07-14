@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp", "PrismApp\PrismA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLoackApp", "DeadLoackApp\DeadLoackApp.csproj", "{9C349A6B-400B-41CC-A16C-45EA049283C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisposeTest", "DisposeTest\DisposeTest.csproj", "{43DA5895-5B4C-4196-9F8B-24C4E9DEEFF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9C349A6B-400B-41CC-A16C-45EA049283C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C349A6B-400B-41CC-A16C-45EA049283C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C349A6B-400B-41CC-A16C-45EA049283C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43DA5895-5B4C-4196-9F8B-24C4E9DEEFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DA5895-5B4C-4196-9F8B-24C4E9DEEFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DA5895-5B4C-4196-9F8B-24C4E9DEEFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DA5895-5B4C-4196-9F8B-24C4E9DEEFF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

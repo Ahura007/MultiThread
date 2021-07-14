@@ -110,10 +110,6 @@ namespace PortalApp
         }
 
 
-        private void btn_ConfigureAwaitFalse_Click(object sender, EventArgs e)
-        {
-            Task.Run(async () => { await GetSampleString().ConfigureAwait(false); })
-                .GetAwaiter().GetResult();
-        }
+        
     }
 }
