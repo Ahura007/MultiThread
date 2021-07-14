@@ -21,7 +21,7 @@ namespace PrismApp.Controllers
             Thread.Sleep(2000);
             return new List<string>()
             {
-                "1","2"
+                "1", "2"
             };
         }
     }

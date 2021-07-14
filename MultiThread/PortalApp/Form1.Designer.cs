@@ -34,9 +34,10 @@ namespace PortalApp
             this.btn_ManyThread = new System.Windows.Forms.Button();
             this.btn_OneSyncRequest = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lst_Result = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lst_Result = new System.Windows.Forms.ListBox();
             this.btn_AsyncRequest = new System.Windows.Forms.Button();
+            this.btn_ConfigureAwait = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@ namespace PortalApp
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 73);
+            this.label1.Size = new System.Drawing.Size(581, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "Portal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,7 +76,7 @@ namespace PortalApp
             // btn_OneSyncRequest
             // 
             this.btn_OneSyncRequest.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btn_OneSyncRequest.Location = new System.Drawing.Point(148, 89);
+            this.btn_OneSyncRequest.Location = new System.Drawing.Point(134, 89);
             this.btn_OneSyncRequest.Name = "btn_OneSyncRequest";
             this.btn_OneSyncRequest.Size = new System.Drawing.Size(123, 39);
             this.btn_OneSyncRequest.TabIndex = 3;
@@ -89,24 +90,13 @@ namespace PortalApp
             this.groupBox1.Controls.Add(this.lst_Result);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(480, 73);
+            this.groupBox1.Location = new System.Drawing.Point(261, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(320, 377);
+            this.groupBox1.Size = new System.Drawing.Size(320, 364);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Api Result";
-            // 
-            // lst_Result
-            // 
-            this.lst_Result.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lst_Result.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lst_Result.FormattingEnabled = true;
-            this.lst_Result.ItemHeight = 18;
-            this.lst_Result.Location = new System.Drawing.Point(5, 80);
-            this.lst_Result.Name = "lst_Result";
-            this.lst_Result.Size = new System.Drawing.Size(310, 292);
-            this.lst_Result.TabIndex = 0;
             // 
             // button1
             // 
@@ -121,10 +111,21 @@ namespace PortalApp
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lst_Result
+            // 
+            this.lst_Result.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lst_Result.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lst_Result.FormattingEnabled = true;
+            this.lst_Result.ItemHeight = 18;
+            this.lst_Result.Location = new System.Drawing.Point(5, 67);
+            this.lst_Result.Name = "lst_Result";
+            this.lst_Result.Size = new System.Drawing.Size(310, 292);
+            this.lst_Result.TabIndex = 0;
+            // 
             // btn_AsyncRequest
             // 
             this.btn_AsyncRequest.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btn_AsyncRequest.Location = new System.Drawing.Point(148, 134);
+            this.btn_AsyncRequest.Location = new System.Drawing.Point(134, 134);
             this.btn_AsyncRequest.Name = "btn_AsyncRequest";
             this.btn_AsyncRequest.Size = new System.Drawing.Size(123, 39);
             this.btn_AsyncRequest.TabIndex = 5;
@@ -132,11 +133,23 @@ namespace PortalApp
             this.btn_AsyncRequest.UseVisualStyleBackColor = true;
             this.btn_AsyncRequest.Click += new System.EventHandler(this.btn_AsyncRequest_Click);
             // 
+            // btn_ConfigureAwait
+            // 
+            this.btn_ConfigureAwait.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_ConfigureAwait.Location = new System.Drawing.Point(12, 199);
+            this.btn_ConfigureAwait.Name = "btn_ConfigureAwait";
+            this.btn_ConfigureAwait.Size = new System.Drawing.Size(116, 39);
+            this.btn_ConfigureAwait.TabIndex = 6;
+            this.btn_ConfigureAwait.Text = "ConfigureAwait";
+            this.btn_ConfigureAwait.UseVisualStyleBackColor = true;
+            this.btn_ConfigureAwait.Click += new System.EventHandler(this.btn_ConfigureAwait_Click);
+            // 
             // frm_Portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(581, 437);
+            this.Controls.Add(this.btn_ConfigureAwait);
             this.Controls.Add(this.btn_AsyncRequest);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_OneSyncRequest);
@@ -162,6 +175,7 @@ namespace PortalApp
         private System.Windows.Forms.ListBox lst_Result;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_AsyncRequest;
+        private System.Windows.Forms.Button btn_ConfigureAwait;
     }
 }
 

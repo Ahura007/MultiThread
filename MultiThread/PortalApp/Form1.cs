@@ -19,7 +19,6 @@ namespace PortalApp
             InitializeComponent();
         }
 
-
         private void frm_OneThread_Click(object sender, EventArgs e)
         {
             while (true)
@@ -27,7 +26,6 @@ namespace PortalApp
 
             }
         }
-
 
         private async void btn_ManyThread_Click(object sender, EventArgs e)
         {
@@ -49,6 +47,8 @@ namespace PortalApp
                 var responseTask = client.GetAsync(client.BaseAddress + "Sync");
 
                 var result = responseTask.Result;
+                // var result1 = responseTask.GetAwaiter().GetResult();
+
                 if (result.IsSuccessStatusCode)
                 {
                     var readTask = result.Content.ReadAsAsync<List<string>>();
@@ -97,6 +97,23 @@ namespace PortalApp
             }
         }
 
-      
+        private void btn_ConfigureAwait_Click(object sender, EventArgs e)
+        {
+            var result = GetSampleString().Result;
+            lst_Result.Items.Add(result);
+        }
+
+        public async Task<string> GetSampleString()
+        {
+            await Task.Delay(2000);
+            return "configure await result";
+        }
+
+
+        private void btn_ConfigureAwaitFalse_Click(object sender, EventArgs e)
+        {
+            Task.Run(async () => { await GetSampleString().ConfigureAwait(false); })
+                .GetAwaiter().GetResult();
+        }
     }
 }
