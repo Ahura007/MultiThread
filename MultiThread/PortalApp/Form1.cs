@@ -109,7 +109,37 @@ namespace PortalApp
             return "configure await result";
         }
 
+        private void btnMultiThread_Click(object sender, EventArgs e)
+        {
+            var thread1 = new Thread(WorkThreadFunction);
+            thread1.Name = "Thread 1";
+            thread1.Start();
 
-        
+            var thread2 = new Thread(WorkThreadFunction);
+            thread2.Name = "Thread 2";
+            thread2.Start();
+
+            var thread3 = new Thread(WorkThreadFunction);
+            thread3.Name = "Thread 3";
+            thread3.Start();
+
+        }
+
+        public void WorkThreadFunction()
+        {
+            try
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    var sssssssssssss = Thread.CurrentThread.Name;
+                }
+            }
+            catch (Exception ex)
+            {
+                // log errors
+            }
+        }
     }
+
+
 }

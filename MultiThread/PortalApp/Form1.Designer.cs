@@ -38,6 +38,7 @@ namespace PortalApp
             this.lst_Result = new System.Windows.Forms.ListBox();
             this.btn_AsyncRequest = new System.Windows.Forms.Button();
             this.btn_ConfigureAwait = new System.Windows.Forms.Button();
+            this.btnMultiThread = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,11 +145,22 @@ namespace PortalApp
             this.btn_ConfigureAwait.UseVisualStyleBackColor = true;
             this.btn_ConfigureAwait.Click += new System.EventHandler(this.btn_ConfigureAwait_Click);
             // 
+            // btnMultiThread
+            // 
+            this.btnMultiThread.Location = new System.Drawing.Point(12, 244);
+            this.btnMultiThread.Name = "btnMultiThread";
+            this.btnMultiThread.Size = new System.Drawing.Size(116, 39);
+            this.btnMultiThread.TabIndex = 7;
+            this.btnMultiThread.Text = "Many Thread";
+            this.btnMultiThread.UseVisualStyleBackColor = true;
+            this.btnMultiThread.Click += new System.EventHandler(this.btnMultiThread_Click);
+            // 
             // frm_Portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 437);
+            this.Controls.Add(this.btnMultiThread);
             this.Controls.Add(this.btn_ConfigureAwait);
             this.Controls.Add(this.btn_AsyncRequest);
             this.Controls.Add(this.groupBox1);
@@ -176,6 +188,7 @@ namespace PortalApp
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_AsyncRequest;
         private System.Windows.Forms.Button btn_ConfigureAwait;
+        private System.Windows.Forms.Button btnMultiThread;
     }
 }
 
