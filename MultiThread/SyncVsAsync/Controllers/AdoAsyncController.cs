@@ -12,11 +12,11 @@ namespace SyncVsAsync.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AsyncController : ControllerBase
+    public class AdoAsyncController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public AsyncController(IConfiguration configuration)
+        public AdoAsyncController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
