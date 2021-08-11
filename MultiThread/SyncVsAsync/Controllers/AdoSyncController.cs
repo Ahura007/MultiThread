@@ -19,19 +19,16 @@ namespace SyncVsAsync.Controllers
             _configuration = configuration;
         }
 
-        [HttpGet]
-        public string Get()
+        [HttpPost]
+        public string Post()
         {
             var cs = _configuration.GetConnectionString("ConnectionStrings");
             using var con = new SqlConnection(cs);
-            using var cmd = new SqlCommand("GetAllStudent", con);
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            var q = "insert into Teachers (TeacherName) values (@TeacherName)";
             con.Open();
-            using var rdr = cmd.ExecuteReader();
-            var dt = new DataTable();
-            dt.Load(rdr);
-
+            using var cmd = new SqlCommand(q, con);
+            cmd.Parameters.AddWithValue("@TeacherName", Guid.NewGuid().ToString());
+            cmd.ExecuteNonQuery();
             return "Hello";
         }
     }

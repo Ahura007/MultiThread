@@ -11,12 +11,12 @@ namespace PrismApp.Controllers
 {
     public class AsyncController : ApiController
     {
-        public async Task<List<string>> Get()
+        public Task<List<string>> GetAsync()
         {
-            return await Task.Run(async () => await Data());
+            return Task.Run(() => Task.FromResult(Data()));
         }
 
-        private async Task<List<string>> Data()
+        private List<string> Data()
         {
             Thread.Sleep(2000);
             return new List<string>()

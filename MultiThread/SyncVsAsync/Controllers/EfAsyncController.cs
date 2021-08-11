@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using SyncVsAsync.Context;
 using SyncVsAsync.Model;
 
@@ -33,7 +29,7 @@ namespace SyncVsAsync.Controllers
         [HttpPost]
         public async Task<ActionResult> PostAsync()
         {
-            var t = new Teacher()
+            var t = new Teacher
             {
                 TeacherName = Guid.NewGuid().ToString()
             };
@@ -41,7 +37,5 @@ namespace SyncVsAsync.Controllers
             await _dbContext.SaveChangesAsync();
             return Ok(t);
         }
-
-
     }
 }
